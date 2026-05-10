@@ -27,10 +27,10 @@ const hiddenCostLeft = [
   "Daily spend",
 ];
 const inHouseRoles = [
-  { role: "A Standard Meta Ads Specialist ", cost: "₹80K" },
-  { role: "A Conventional Creative Strategist", cost: "₹60K" },
-  { role: "A Junior Video Editor ", cost: "₹40K" },
-  { role: "A Basic Graphic Designer", cost: "₹40K" },
+  { role: "A Standard Meta Ads Specialist ", cost: "$900" },
+  { role: "A Conventional Creative Strategist", cost: "$600" },
+  { role: "A Junior Video Editor ", cost: "$600" },
+  { role: "A Basic Graphic Designer", cost: "$700" },
 ];
 
 const additionalFeatures = [
@@ -86,9 +86,9 @@ const caseStudies = [
     afterLabel: "AFTER (90 DAYS)",
     rows: [
       ["Monthly lead volume", "1,200", "2,880 (+140%)", "text-[#10B981]"],
-      ["Cost per lead", "Rs.420", "Rs.285 (-32%)", "text-[#10B981]"],
+      ["Cost per lead", "$5", "$13 (-28%)", "text-[#10B981]"],
       ["Qualified lead rate", "28%", "41% (stable)", "text-[#10B981]"],
-      ["Ad spend", "Rs.8L", "Rs.22L (scaled)", "text-[#2563EB]"],
+      ["Ad spend", "$1K", "$3K (scaled)", "text-[#2563EB]"],
     ],
     quote:
       "\"Acquirely didn't just run ads. They built a system that lets us predict how many qualified leads we'll get at what cost. That's rare.\"",
@@ -112,9 +112,9 @@ const caseStudies = [
     afterLabel: "AFTER (4 MONTHS)",
     rows: [
       ["Qualified leads/month", "18", "30 (+67%)", "text-[#10B981]"],
-      ["Cost per qualified lead", "Rs.28,000", "Rs.16,500 (-41%)", "text-[#10B981]"],
+      ["Cost per qualified lead", "$18", "$13 (-28%)", "text-[#10B981]"],
       ["Enrollment inquiries", "6", "18 (3x)", "text-[#10B981]"],
-      ["Ad spend", "L", "Rs.12L (scaled)", "text-[#2563EB]"],
+      ["Ad spend", "$1K", "$3K (scaled)", "text-[#2563EB]"],
     ],
     quote:
       "\"Selling a Rs.70L course via Facebook? Everyone said it's impossible. Acquirely built a system that actually works.\"",
@@ -126,7 +126,7 @@ const caseStudies = [
 const fitItems = [
   "Multi-country operations",
   "Online lead gen ",
-  "High-ticket LTV > Rs.50,000",
+  "High-ticket LTV > $5K",
   "⁠spending $10K+ monthly on Facebook Ads",
   "Loans, education, real estate, training, B2B, healthcare chains",
   "You have a sales team that needs qualified leads",
@@ -690,7 +690,7 @@ export default function DoneForYouLandingPage() {
         <div className="mb-10 grid gap-4 sm:grid-cols-2 md:mb-12 md:gap-6">
           <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#F4F7FF] px-4 py-8 text-center md:px-6 md:py-10">
             <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $10K - $50K ad spend</p>
-            <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">₹75,000</p>
+            <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">$1000</p>
             <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">+ GST</p>
           </div>
           
@@ -733,7 +733,7 @@ export default function DoneForYouLandingPage() {
             </span>
             <div className="text-left sm:text-right">
               <span className="mb-1 block text-[28px] font-bold leading-[1] text-[#B91C1C] md:text-[36px] lg:text-[40px]">
-                ₹2.2L+
+                $2800+
               </span>
               <span className="block text-[14px] text-[#B91C1C] md:text-[16px] lg:text-[18px]">
                 per month
