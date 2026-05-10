@@ -27,10 +27,10 @@ const hiddenCostLeft = [
   "Daily spend",
 ];
 const inHouseRoles = [
-  { role: "A Standard Meta Ads Specialist ", cost: "$900" },
-  { role: "A Conventional Creative Strategist", cost: "$600" },
-  { role: "A Junior Video Editor ", cost: "$600" },
-  { role: "A Basic Graphic Designer", cost: "$700" },
+  { role: "A Standard Meta Ads Specialist ", cost: "$4000" },
+  { role: "A Conventional Creative Strategist", cost: "$7000" },
+  { role: "A Junior Video Editor ", cost: "$5000" },
+  { role: "A Basic Graphic Designer", cost: "$5000" },
 ];
 
 const additionalFeatures = [
@@ -86,9 +86,9 @@ const caseStudies = [
     afterLabel: "AFTER (90 DAYS)",
     rows: [
       ["Monthly lead volume", "1,200", "2,880 (+140%)", "text-[#10B981]"],
-      ["Cost per lead", "$5", "$13 (-28%)", "text-[#10B981]"],
+      ["Cost per lead", "Rs.420", "Rs.285 (-28%)", "text-[#10B981]"],
       ["Qualified lead rate", "28%", "41% (stable)", "text-[#10B981]"],
-      ["Ad spend", "$1K", "$3K (scaled)", "text-[#2563EB]"],
+      ["Ad spend", "Rs.8L", "Rs.22L (scaled)", "text-[#2563EB]"],
     ],
     quote:
       "\"Acquirely didn't just run ads. They built a system that lets us predict how many qualified leads we'll get at what cost. That's rare.\"",
@@ -112,9 +112,9 @@ const caseStudies = [
     afterLabel: "AFTER (4 MONTHS)",
     rows: [
       ["Qualified leads/month", "18", "30 (+67%)", "text-[#10B981]"],
-      ["Cost per qualified lead", "$18", "$13 (-28%)", "text-[#10B981]"],
+      ["Cost per qualified lead", "Rs.28,000", "Rs.16,500 (-41%)", "text-[#10B981]"],
       ["Enrollment inquiries", "6", "18 (3x)", "text-[#10B981]"],
-      ["Ad spend", "$1K", "$3K (scaled)", "text-[#2563EB]"],
+      ["Ad spend", "Rs.3L", "Rs.12L (scaled)", "text-[#2563EB]"],
     ],
     quote:
       "\"Selling a Rs.70L course via Facebook? Everyone said it's impossible. Acquirely built a system that actually works.\"",
@@ -690,25 +690,8 @@ export default function DoneForYouLandingPage() {
         <div className="mb-10 grid gap-4 sm:grid-cols-2 md:mb-12 md:gap-6">
           <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#F4F7FF] px-4 py-8 text-center md:px-6 md:py-10">
             <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $10K - $50K ad spend</p>
-            <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">$1000</p>
-            <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">+ GST</p>
-          </div>
-          
-          <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#F0FFF5] px-4 py-8 text-center md:px-6 md:py-10">
-            <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $50K+ ad spend</p>
-            <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">10%</p>
-            <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">of total ad spend</p>
-          </div>
-        </div>
-
-        {/* Compare to Hiring In-House */}
-        <div className="rounded-[23px] border border-[#E5E5E5] bg-white p-5 shadow-[0_0_4px_rgba(0,0,0,0.05)] md:p-8 lg:p-12">
-          <h3 className="mb-6 text-[22px] font-semibold text-black md:mb-8 md:text-[28px] lg:text-[32px]">
-            Compare That to Hiring In-House
-          </h3>
-          
-          <div className="space-y-2 md:space-y-3">
-            {/* Table Header */}
+            <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">$3000</p>
+A
             <div className="flex justify-between px-2 pb-2 text-[11px] font-medium uppercase tracking-[1.5px] text-[#ACACC3] md:px-4 md:text-[14px] md:tracking-[2px]">
               <span>Role</span>
               <span>Monthly Cost</span>
@@ -733,7 +716,7 @@ export default function DoneForYouLandingPage() {
             </span>
             <div className="text-left sm:text-right">
               <span className="mb-1 block text-[28px] font-bold leading-[1] text-[#B91C1C] md:text-[36px] lg:text-[40px]">
-                $2800+
+                $21000+
               </span>
               <span className="block text-[14px] text-[#B91C1C] md:text-[16px] lg:text-[18px]">
                 per month
