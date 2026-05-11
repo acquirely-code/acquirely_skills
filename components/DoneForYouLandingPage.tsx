@@ -92,7 +92,7 @@ const caseStudies = [
     ],
     quote:
       "\"Acquirely didn't just run ads. They built a system that lets us predict how many qualified leads we'll get at what cost. That's rare.\"",
-    author: "- Founder, Kashti Finserv",
+    author: "- Ashish Aggarwal, Founder- Kashti Finserv",
   },
   {
     title: "International Schooling (9 Regions, SGD 3K/day)",
@@ -105,7 +105,7 @@ const caseStudies = [
     ],
     quote:
       "\"We were spending SGD 90K/month with no predictability. Now we know exactly what each region delivers.\"",
-    author: "- CMO, International Schooling",
+    author: "- Syed, CMO - International Schooling",
   },
   {
     title: "Right Source Aviation (Pilot Training - Rs.60-80L Course)",
@@ -118,15 +118,14 @@ const caseStudies = [
     ],
     quote:
       "\"Selling a Rs.70L course via Facebook? Everyone said it's impossible. Acquirely built a system that actually works.\"",
-    author: "- Director, Right Source Aviation",
+    author: "- Capt. V Vijay, Founder - Right Source Aviation",
   },
 ];
 
 
 const fitItems = [
-  "Multi-country operations",
+  "Multi-city or multi-country operations",
   "Online lead gen ",
-  "High-ticket LTV > $5K",
   "⁠spending $10K+ monthly on Facebook Ads",
   "Loans, education, real estate, training, B2B, healthcare chains",
   "You have a sales team that needs qualified leads",
@@ -135,7 +134,6 @@ const fitItems = [
 const notFitItems = [
   "Single-location business (one clinic, one office)",
   "Local service with catchment area < 50km",
-  "Low-ticket leads (<Rs.10K LTV)",
   "Spending < $10K and not willing to scale",
   "No CRM or sales follow-up process",
   "You just want \"cheap leads\"",
@@ -151,7 +149,7 @@ const founders = [
       "Mausam spent 12 years inside education - building curricula, publishing 300+ books, and reaching 2,000+ schools. That journey taught him one thing: great products don't grow themselves. He built Acquirely to turn scattered ad spend into acquisition systems that compound.",
     bullets: [
       "Founder-level understanding of what happens before and after the click",
-      "Managed $30mn+ in annual ad spend",
+      "Managed $3.6mn+ in annual ad spend",
       "Specialises in funnel strategy, GTM thinking, and scaling systems",
     ],
   },
@@ -161,7 +159,7 @@ const founders = [
     tag: "Performance Marketing Lead",
     image: kunalImage,
     body:
-      "Kunal has managed over $30mn+ in ad spend across 30+ brands in E-Commerce, EdTech, and Real Estate. He builds acquisition systems that drive predictable revenue, not just traffic. His hands-on approach ensures the A3 Flywheel runs without friction.",
+      "Kunal has managed over $3.6mn+ in ad spend across 30+ brands in E-Commerce, EdTech, and Real Estate. He builds acquisition systems that drive predictable revenue, not just traffic. His hands-on approach ensures the A3 Flywheel runs without friction.",
     bullets: [
       "Hands-on Meta and Growth strategist",
       "Full-funnel acquisition systems using Google & Meta",
@@ -172,39 +170,34 @@ const founders = [
 
 const faqItems = [
   {
-    question: "How long before I see stable cost per qualified lead?",
+    question: "How quickly can results be seen?",
     answer:
-      "Typically 3-6 weeks to identify winning creatives/offers. Systems lock at ~90 days for full predictability.",
+      "Initial winners typically appear within 3–6 weeks, followed by structured scaling.",
   },
   {
-    question: "Do you handle lead nurturing or CRM integration?",
+    question: "How soon do campaigns launch?",
     answer:
-      "Yes. We assist with GoHighLevel, HubSpot, and Salesforce integrations. We also set up automated SMS/email 'speed-to-lead' workflows to ensure no lead goes cold.",
+      "Campaigns usually go live within 5–7 days after onboarding.",
   },
   {
-    question: "What regions can you handle?",
+    question: "What if ROAS targets aren’t met?",
     answer:
-      "We operate globally, with heavy expertise in Tier-1 markets (US, UK, UAE) and the Pan-India landscape. We adapt creative strategy based on regional CPMs and local intent.",
+      "We continuously optimise strategy, creatives, and scaling systems rather than just adjusting ads.",
   },
   {
-    question: "What if my product LTV is low (<Rs.50K)?",
+    question: "Are creatives included?",
     answer:
-      "At this price point, volume is key. We focus on high-efficiency 'straight-to-sale' or automated webinar funnels to ensure your Customer Acquisition Cost (CAC) remains profitable.",
+      "We guide the creative strategy and testing framework. Execution can be structured separately.",
   },
   {
-    question: "Do you guarantee a specific cost per lead?",
+    question: "Do you offer SEO or organic social media?",
     answer:
-      "We don't guarantee a static CPL because market auctions fluctuate. However, we do guarantee a 'Cost Per Qualified Call/Meeting' framework to ensure you aren't paying for junk data.",
+      "No. Our focus is purely paid performance marketing and Meta Ads scaling systems.",
   },
   {
-    question: "How do we start?",
+    question: "Do you run international campaigns?",
     answer:
-      "It begins with a Strategy Audit. We review your current funnel, identify bottlenecks, and if there’s a fit, we can have your first campaign live within 7-10 business days.",
-  },
-  {
-    question: "What if we're already working with an agency?",
-    answer:
-      "Many of our clients use us as a performance-layer on top of their creative agency. We can run a 'Champion vs. Challenger' pilot to prove we can beat your current baseline.",
+      "Yes — including US, UAE, and UK markets.",
   },
 ];
 function CheckBullet({ color = "#10B981" }: { color?: string }) {
@@ -477,7 +470,7 @@ export default function DoneForYouLandingPage() {
               <div className="mt-7 flex flex-col gap-2.5 font-['Open_Sans'] text-xs text-[#99A1AF] sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-6 sm:text-sm">
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
-                  <span>Rs.30Cr+ Ad Spend Managed</span>
+                  <span>$3.6mn+ Ad Spend Managed</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-[#2B7FFF]" strokeWidth={2.5} />
