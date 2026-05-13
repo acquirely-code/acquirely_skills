@@ -10,6 +10,8 @@ import kunalImage from "@/app/assests/kunalmondal.png";
 import mausamImage from "@/app/assests/mausamarora.png";
 import { Target, BarChart3, ClipboardEdit, IndianRupee } from "lucide-react";
 import { ShieldCheck, TrendingUp, UserCheck, Zap } from "lucide-react";
+import { Pointer } from 'lucide-react';
+
 
 const WistiaPlayer = dynamic(() => import("@/components/WistiaPlayer"), {
   ssr: false,
@@ -492,7 +494,7 @@ export default function DoneForYouLandingPage() {
 
       {/* 3. SUBTEXT & CTA: Order 3 on Mobile, but back to Column 1 on Desktop */}
       <div className="order-3 lg:col-start-1 lg:row-start-2">
-        <h2 className="mt-6 font-['Open_Sans'] text-xl font-semibold text-white sm:mt-8 sm:text-2xl">We Fix It.</h2>
+        <h2 className="mt-4 font-['Open_Sans'] text-xl font-semibold text-white sm:m-0  sm:text-2xl">We Fix It.</h2>
         <p className="mt-2 max-w-[430px] font-['Open_Sans'] text-[15px] leading-6 text-white sm:text-base sm:leading-7 lg:text-lg lg:leading-[29px]">
           Same ad spend. Better lead quality. Higher ROI. Powered by our A3 Flywheel for Lead Gen.
         </p>
@@ -502,7 +504,7 @@ export default function DoneForYouLandingPage() {
             type="button"
             className="mt-7 inline-flex rounded-xl bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 py-3.5 text-center text-sm font-bold text-white shadow-[0_20px_25px_-5px_rgba(43,127,255,0.25),0_8px_10px_-6px_rgba(43,127,255,0.25)] sm:mt-8 sm:px-8 sm:py-4 sm:text-base lg:text-lg"
           >
-            👉 Get Leads Your Sales Team Will Love
+             <span className="rotate-90 "><Pointer/></span><span className="pl-2">Get Leads Your Sales Team Will Love</span>
           </button>
         </Link>
         
@@ -940,10 +942,10 @@ export default function DoneForYouLandingPage() {
       </section>
 
       <section className="bg-[#0F172A]">
-        <div className="mx-auto max-w-[1540px]  py-12 sm:px-2 sm:py-16 lg:px-[170px] lg:py-20">
+        <div className="mx-auto max-w-[1640px]  py-4 sm:px-2 sm:py-16 lg:px-[170px] lg:py-4">
           <div className="px-2 py-8 sm:px-2 sm:py-12">
-            <div className="mx-auto max-w-[1225px] px-2 py-6 text-center sm:px-8 sm:py-10">
-            <h2 className="mx-auto max-w-[1225px] text-[22px] font-bold leading-[1.15] text-white sm:text-[38px] sm:leading-[1.15] lg:text-[48px] lg:leading-[59px]">
+            <div className="mx-auto max-w-[1425px] px-2 py-6 text-center sm:px-8 sm:py-10">
+            <h2 className="mx-auto max-w-[1425px] text-[22px] font-bold leading-[1.15] text-white sm:text-[38px] sm:leading-[1.15] lg:text-[48px] lg:leading-[59px]">
               <span>Ready to Turn </span>
               <span className="bg-[linear-gradient(90deg,#A78BFA_0%,#F97316_100%)] bg-clip-text text-transparent">
                 &quot;Junk Leads&quot;
@@ -962,7 +964,7 @@ export default function DoneForYouLandingPage() {
               type="button"
               className="mt-7 inline-flex min-h-[52px] items-center justify-center rounded-xl bg-white px-4 py-3.5 text-center text-[12px] font-bold text-[#0F172A] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] sm:mt-8 sm:min-h-[56px] sm:px-8 sm:py-4 sm:text-base lg:px-10 lg:text-[20px]"
             >
-             👉 Book Your Lead Gen Growth Audit
+             <span className="rotate-90 "><Pointer/></span> <span className="pl-2">Book Your Lead Gen Growth Audit</span>
             </button>
               </Link>
             <div className="mt-5 flex flex-col items-center justify-center gap-2 text-xs text-[#BEDBFF] sm:mt-6 sm:flex-row sm:gap-8 sm:text-sm">
@@ -973,7 +975,7 @@ export default function DoneForYouLandingPage() {
 
 
 
-             <div className="md:mt-24 mt-12 border-t border-white/20 pt-8 flex flex-col gap-6"></div>
+             <div className="md:mt-6 mt-6 border-t border-white/20 pt-8 flex flex-col gap-6"></div>
 
             
               <div className="flex text-center mt-4 items-center justify-center gap-6 order-1 md:order-2 md:text-[16px] text-[12px] text-white/90">
