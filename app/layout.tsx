@@ -11,9 +11,9 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Acquirely - Scaling Brands That Matter.",
+  title: "Meta Ads for Qualified Leads | Acquirely.",
   description:
-    "Scale your ecommerce brand with top Meta Ads performance marketing. Predictable ROAS, proven results.",
+    "Scale Meta Ads with better lead quality, lower CPQL, and predictable pipelines using Acquirely’s A3 Flywheel framework.",
 };
 
 export default function RootLayout({
