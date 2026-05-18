@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
-import { Check, CheckCircle2, Quote, XCircle } from "lucide-react";
+import { Check, CheckCircle2, DollarSign, Quote, XCircle } from "lucide-react";
 import flywheelImage from "@/app/assests/flywheelmodel.png";
 import kunalImage from "@/app/assests/kunalmondal.png";
 import mausamImage from "@/app/assests/mausamarora.png";
@@ -11,6 +11,7 @@ import { Target, BarChart3, ClipboardEdit, IndianRupee } from "lucide-react";
 import { ShieldCheck, TrendingUp, UserCheck, Zap } from "lucide-react";
 import { Pointer } from 'lucide-react';
 import logo from "@/app/assests/logo.png";
+import Dashboard from "@/app/assests/dashboard.png";
 
 const hiddenCostLeft = [
   { 
@@ -27,7 +28,7 @@ const hiddenCostLeft = [
   },
   { 
     label: "Daily spend", 
-    icon: <IndianRupee className="h-4 w-4 text-[#FF6467]" /> 
+    icon: <DollarSign className="h-4 w-4 text-[#FF6467]" /> 
   },
 ];
 const inHouseRoles = [
@@ -478,22 +479,7 @@ export default function DoneForYouLandingPage() {
 
       {/* 2. TEXT CTA (Replaced Video): Order 2 on Mobile, but Column 2 on Desktop */}
       <div className="order-2 mt-8 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2">
-        <div className="mx-auto flex h-full min-h-[343px] w-full max-w-[611px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-8 text-center shadow-2xl backdrop-blur-md">
-          <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
-            Want to See Exactly How We'd Grow Your Business?
-          </h3>
-          <p className="mb-8 text-sm leading-relaxed text-[#CAD5E2] sm:text-base">
-            Book a free 30-minute audit. We'll analyse your current ad setup, show you where leads are being lost, and give you a clear plan on the call, for free.
-          </p>
-          <Link href="https://forms.acquirely.in/acquirely/form/LeadGenFunnelReviewCall/formperma/DEijNOw1e1C4Wd8r6luSZlNxj1zQVtObr106aUYe4-0">
-            <button
-              type="button"
-              className="inline-flex rounded-xl bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-8 py-4 text-center text-sm font-bold text-white shadow-[0_20px_25px_-5px_rgba(43,127,255,0.25),0_8px_10px_-6px_rgba(43,127,255,0.25)] transition-transform hover:scale-105 sm:text-base"
-            >
-              <span>Book Your Free Audit &rarr;</span>
-            </button>
-          </Link>
-        </div>
+       <Image src={Dashboard} alt="Dashboard" className="h-full w-full object-cover" />
       </div>
 
       {/* 3. SUBTEXT & CTA: Order 3 on Mobile, but back to Column 1 on Desktop */}
@@ -960,7 +946,7 @@ export default function DoneForYouLandingPage() {
             <h2 className="mx-auto max-w-[1425px] text-[22px] font-bold leading-[1.15] text-white sm:text-[38px] sm:leading-[1.15] lg:text-[48px] lg:leading-[59px]">
               <span>Ready to Turn </span>
               <span className="bg-[linear-gradient(90deg,#A78BFA_0%,#F97316_100%)] bg-clip-text text-transparent">
-                &quot;no system&quot;
+                &quot;No system&quot;
               </span>
               <span> Into a Predictable Pipeline?</span>
             </h2>
