@@ -1,27 +1,15 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
-import { Check, CheckCircle2, Quote,  XCircle } from "lucide-react";
+import { Check, CheckCircle2, Quote, XCircle } from "lucide-react";
 import flywheelImage from "@/app/assests/flywheelmodel.png";
 import kunalImage from "@/app/assests/kunalmondal.png";
 import mausamImage from "@/app/assests/mausamarora.png";
 import { Target, BarChart3, ClipboardEdit, IndianRupee } from "lucide-react";
 import { ShieldCheck, TrendingUp, UserCheck, Zap } from "lucide-react";
 import { Pointer } from 'lucide-react';
-
-
-const WistiaPlayer = dynamic(() => import("@/components/WistiaPlayer"), {
-  ssr: false,
-  loading: () => (
-    <div
-      className="w-full animate-pulse rounded-lg bg-white/10"
-      style={{ paddingTop: "56.25%" }}
-    />
-  ),
-});
 import logo from "@/app/assests/logo.png";
 
 const hiddenCostLeft = [
@@ -43,10 +31,10 @@ const hiddenCostLeft = [
   },
 ];
 const inHouseRoles = [
-  { role: "A Standard Meta Ads Specialist ", cost: "$4000" },
-  { role: "A Conventional Creative Strategist", cost: "$7000" },
-  { role: "A Junior Video Editor ", cost: "$5000" },
-  { role: "A Basic Graphic Designer", cost: "$5000" },
+  { role: "Meta Performance Marketer", cost: "$6,500" },
+  { role: "Creative Strategist", cost: "$5,000" },
+  { role: "Video Editor", cost: "$3,500" },
+  { role: "Graphic Designer", cost: "$3,500" },
 ];
 
 const additionalFeatures = [
@@ -104,26 +92,26 @@ const flywheelCards = [
     title: "🔬 A3 — Micro Analysis & Redistribution",
     body: "Analyze by day of week, hour, region. Redistribute budget to high-performing segments daily.",
     goalColor: "text-[#10B981]",
-    goal: "Squeeze every rupee from your lead budget.",
+    goal: "Squeeze every dollar from your lead budget.",
   },
 ];
 
 const caseStudies = [
   {
-    title: "Kashti Finserv (Loan Lead Gen)",
+    title: "Financial Services Brand Loan Lead Generation",
     afterLabel: "AFTER (90 DAYS)",
     rows: [
       ["Monthly lead volume", "1,200", "2,880 (+140%)", "text-[#10B981]"],
-      ["Cost per lead", "Rs.420", "Rs.285 (-32%)", "text-[#10B981]"],
+      ["Cost per lead", "Baseline", "Down 32%", "text-[#10B981]"],
       ["Qualified lead rate", "28%", "41% (stable)", "text-[#10B981]"],
-      ["Ad spend", "Rs.8L", "Rs.22L (scaled)", "text-[#2563EB]"],
+      ["Ad spend", "Baseline", "2.75x scaled", "text-[#2563EB]"],
     ],
     quote:
       "\"Acquirely didn't just run ads. They built a system that lets us predict how many qualified leads we'll get at what cost. That's rare.\"",
-    author: "- Ashish Aggarwal, Founder- Kashti",
+    author: "- Founder, Financial Services Brand",
   },
   {
-    title: "International Schooling (9 Regions, SGD 3K/day)",
+    title: "International Education Brand (9 Regions, SGD 3K/day)",
     afterLabel: "AFTER (6 MONTHS)",
     rows: [
       ["Active regions", "4", "9", "text-[#10B981]"],
@@ -133,30 +121,31 @@ const caseStudies = [
     ],
     quote:
       "\"We were spending SGD 90K/month with no predictability. Now we know exactly what each region delivers.\"",
-    author: "- Syed, CMO - International Schooling",
+    author: "- CMO, International Education Brand",
   },
   {
-    title: "Right Source Aviation (Pilot Training - Rs.60-80L Course)",
+    title: "Professional Training Brand High-Ticket Program ($55K-$75K CAD)",
     afterLabel: "AFTER (4 MONTHS)",
     rows: [
       ["Qualified leads/month", "18", "30 (+67%)", "text-[#10B981]"],
-      ["Cost per qualified lead", "Rs.28,000", "Rs.16,500 (-41%)", "text-[#10B981]"],
+      ["Cost per qualified lead", "Baseline", "Down 41%", "text-[#10B981]"],
       ["Enrollment inquiries", "6", "18 (3x)", "text-[#10B981]"],
-      ["Ad spend", "Rs.3L", "Rs.12L (scaled)", "text-[#2563EB]"],
+      ["Ad spend", "Baseline", "4x scaled", "text-[#2563EB]"],
     ],
     quote:
-      "\"Selling a Rs.70L course via Facebook? Everyone said it's impossible. Acquirely built a system that actually works.\"",
-    author: "- Capt. V Vijay, Founder - Right Source Aviation",
+      "\"Selling a high-ticket program via Facebook? Everyone said it's impossible. Acquirely built a system that actually works.\"",
+    author: "- Founder, Professional Training Brand",
   },
 ];
 
 
 const fitItems = [
-  "Multi-city or multi-country operations",
-  "Online lead gen (service available nationally)",
-  "Spending $10K+ monthly on Facebook Ads",
-  "Loans, education, real estate, training, B2B, healthcare chains",
-  "You have a sales team that needs qualified leads",
+  "Real estate agents & teams generating buyer/seller leads",
+  "Mortgage brokers needing consistent qualified applicants",
+  "Med spas & aesthetic clinics booking consultations",
+  "Professional services (legal, financial advisory, coaching)",
+  "Home services businesses (renovation, roofing, HVAC)",
+  "Any business spending $2K+/month on ads with no predictable system",
 ];
 
 const notFitItems = [
@@ -226,6 +215,7 @@ const faqItems = [
     answer: "Book a call, share your current numbers and goals, and we'll tell you honestly if we're the right fit. If yes, onboarding takes 5–7 days. No long-term contracts before we've proven anything."
   }
 ];
+
 function CheckBullet({ color = "#10B981" }: { color?: string }) {
   return (
     <span className="mt-0.5 inline-flex shrink-0 items-center justify-center" style={{ color }}>
@@ -477,26 +467,40 @@ export default function DoneForYouLandingPage() {
       <div className="order-1 lg:col-start-1">
         <h1>
           <span className="max-w-[623px] text-[30px] font-extrabold leading-[1.12] tracking-[-0.5px] text-transparent sm:text-[40px] sm:leading-[1.15] lg:text-[48px] lg:leading-[60px] bg-[linear-gradient(90deg,#818CF8_0%,#F97316_100%)] bg-clip-text">
-            Running Facebook Ads for Leads! 
+            Spending Money on Facebook Ads 
           </span>
+          <br className="hidden lg:block"/>
           <span className="max-w-[623px] pl-1.5 text-[30px] font-extrabold leading-[1.12] tracking-[-0.5px] text-white sm:pl-2 sm:text-[40px] sm:leading-[1.15] lg:text-[48px] lg:leading-[60px]">
-            But Your Sales Team Calls Them Junk
+            But Getting Leads That Go Nowhere?
           </span>
         </h1>
       </div>
 
-      {/* 2. THE VIDEO: Order 2 on Mobile, but Column 2 on Desktop */}
+      {/* 2. TEXT CTA (Replaced Video): Order 2 on Mobile, but Column 2 on Desktop */}
       <div className="order-2 mt-8 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2">
-        <div className="mx-auto w-full max-w-[611px] overflow-hidden rounded-lg bg-white/10 shadow-2xl">
-          <WistiaPlayer mediaId="nm2ou94x6d" />
+        <div className="mx-auto flex h-full min-h-[343px] w-full max-w-[611px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-8 text-center shadow-2xl backdrop-blur-md">
+          <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
+            Want to See Exactly How We'd Grow Your Business?
+          </h3>
+          <p className="mb-8 text-sm leading-relaxed text-[#CAD5E2] sm:text-base">
+            Book a free 30-minute audit. We'll analyse your current ad setup, show you where leads are being lost, and give you a clear plan on the call, for free.
+          </p>
+          <Link href="https://forms.acquirely.in/acquirely/form/LeadGenFunnelReviewCall/formperma/DEijNOw1e1C4Wd8r6luSZlNxj1zQVtObr106aUYe4-0">
+            <button
+              type="button"
+              className="inline-flex rounded-xl bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-8 py-4 text-center text-sm font-bold text-white shadow-[0_20px_25px_-5px_rgba(43,127,255,0.25),0_8px_10px_-6px_rgba(43,127,255,0.25)] transition-transform hover:scale-105 sm:text-base"
+            >
+              <span>Book Your Free Audit &rarr;</span>
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* 3. SUBTEXT & CTA: Order 3 on Mobile, but back to Column 1 on Desktop */}
       <div className="order-3 lg:col-start-1 lg:row-start-2">
-        <h2 className="mt-4 font-['Open_Sans'] text-xl font-semibold text-white sm:m-0  sm:text-2xl">We Fix It.</h2>
-        <p className="mt-2 max-w-[430px] font-['Open_Sans'] text-[15px] leading-6 text-white sm:text-base sm:leading-7 lg:text-lg lg:leading-[29px]">
-          Same ad spend. Better lead quality. Higher ROI. Powered by our A3 Flywheel for Lead Gen.
+        <h2 className="mt-2 font-['Open_Sans'] text-xl font-semibold text-white sm:m-0  sm:text-2xl">We Fix It.</h2>
+        <p className="mt-2 max-w-[530px] font-['Open_Sans'] text-[15px] leading-6 text-white sm:text-base sm:leading-7 lg:text-lg lg:leading-[29px]">
+          Most Vancouver businesses try Facebook ads, spend $2,000-$5,000, see no real return, and quit. The problem was never Facebook. It was the system. We build the system.
         </p>
         
         <Link href="https://forms.acquirely.in/acquirely/form/LeadGenFunnelReviewCall/formperma/DEijNOw1e1C4Wd8r6luSZlNxj1zQVtObr106aUYe4-0">
@@ -533,11 +537,12 @@ export default function DoneForYouLandingPage() {
             <SmallLabel>THE HIDDEN COST</SmallLabel>
             <div className="text-center">
               <h2 className="text-[28px] font-extrabold leading-[1.15] text-transparent sm:text-[34px] sm:leading-[1.2] lg:text-[40px] lg:leading-[40px] bg-[linear-gradient(90deg,#818CF8_0%,#F97316_100%)] bg-clip-text">
-                Every Unqualified Lead Is a Tax on Your Growth.
+                Most Businesses Don't Have a Leads Problem. They Have a System Problem.
               </h2>
-              <p className="mx-auto mt-4 max-w-[768px] font-['Open_Sans'] text-[15px] leading-6 text-[#1E293B] sm:text-[18px] sm:leading-7 lg:text-[20px]">
-                You celebrate 500 leads this month. Your sales team closes 10. The rest? Wasted time, wasted
-                follow-up, wasted budget.
+              <p className="mx-auto mt-4 max-w-[968px] font-opensans text-[15px] leading-6 text-[#1E293B] sm:text-[18px] sm:leading-7 lg:text-[20px]">
+                You boosted a post. Maybe ran a campaign. Spent a few thousand dollars. Got clicks, maybe some form fills but nothing that turned into real revenue. So you stopped. Sound familiar?
+                <br /><br />
+                The issue isn't Facebook. It's that you were running ads without a structure built to convert. That's exactly what we fix.
               </p>
             </div>
 
@@ -575,10 +580,10 @@ export default function DoneForYouLandingPage() {
 
             <div className="max-w-[900px] text-center">
               <p className="font-['Open_Sans'] text-[15px] leading-6 text-[#1E293B] sm:text-base sm:leading-7 lg:text-lg">
-                When you optimize for the wrong metric, scaling just multiplies waste.
+                When there's no system behind your ads, more budget just means more wasted spend.
               </p>
               <p className="mt-4 text-lg font-bold leading-7 text-[#1E293B] sm:text-xl">
-                You stay stuck at  $10K to $30K monthly ad spend - because going bigger means more junk leads.
+                The businesses winning on Meta in 2025 aren't the ones with the biggest budgets they're the ones with the tightest systems.
               </p>
             </div>
           </div>
@@ -674,7 +679,7 @@ export default function DoneForYouLandingPage() {
             <h2 className="mt-8 text-center text-[28px] font-extrabold leading-[1.15] text-[#1F2937] sm:mt-10 sm:text-[34px] sm:leading-[1.2] lg:text-[40px] lg:leading-[40px]">
               <span>From </span>
               <span className="bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_45%)] bg-clip-text text-transparent">
-                &quot;Junk Leads&quot;
+                &quot;No system&quot;
               </span>
               <span> to </span>
               <span className="bg-[linear-gradient(90deg,#C084FC_0%,#F97316_100%)] bg-clip-text text-transparent">
@@ -715,18 +720,25 @@ export default function DoneForYouLandingPage() {
           </p>
         </div>
 
+        {/* Notice Section */}
+        <div className="text-center">
+          <p className="mb-6 text-[14px] font-semibold text-[#7B8BA0] md:text-[16px]">
+            ■ All prices in Canadian Dollars (CAD). USD pricing available on request.
+          </p>
+        </div>
+
         {/* Top Price Cards */}
         <div className="mb-10 grid gap-4 sm:grid-cols-2 md:mb-12 md:gap-6">
           <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#F4F7FF] px-4 py-8 text-center md:px-6 md:py-10">
-            <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $10K - $50K ad spend</p>
-            <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">$3000</p>
-            <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">+ GST</p>
+            <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $2,000 - $30,000/mo ad spend</p>
+            <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">$3,000/month</p>
+            <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">+ applicable tax</p>
           </div>
           
           <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#F0FFF5] px-4 py-8 text-center md:px-6 md:py-10">
-            <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $50K+ ad spend</p>
+            <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $30,000+/mo ad spend</p>
             <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">10%</p>
-            <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">of total ad spend</p>
+            <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">of total monthly ad spend</p>
           </div>
         </div>
 
@@ -762,7 +774,7 @@ export default function DoneForYouLandingPage() {
             </span>
             <div className="text-left sm:text-right">
               <span className="mb-1 block text-[28px] font-bold leading-[1] text-[#B91C1C] md:text-[36px] lg:text-[40px]">
-                $21000+
+                $18,500+
               </span>
               <span className="block text-[14px] text-[#B91C1C] md:text-[16px] lg:text-[18px]">
                 per month
@@ -948,15 +960,14 @@ export default function DoneForYouLandingPage() {
             <h2 className="mx-auto max-w-[1425px] text-[22px] font-bold leading-[1.15] text-white sm:text-[38px] sm:leading-[1.15] lg:text-[48px] lg:leading-[59px]">
               <span>Ready to Turn </span>
               <span className="bg-[linear-gradient(90deg,#A78BFA_0%,#F97316_100%)] bg-clip-text text-transparent">
-                &quot;Junk Leads&quot;
+                &quot;no system&quot;
               </span>
               <span> Into a Predictable Pipeline?</span>
             </h2>
             <p className="mx-auto mt-5 max-w-[610px] font-['Open_Sans'] text-[12px] leading-6 text-[#DBEAFE] sm:mt-6 sm:text-[18px] sm:leading-8 lg:text-[20px] lg:leading-9">
-              If you&apos;re a pan-India, multi-location, or online lead gen brand spending  $10K+ monthly
-              on Facebook Ads...
+              If you're a Vancouver-area or North American business that's tried Facebook ads, spent real money, and didn't see the return you expected the system was the problem, not the platform.
               <br className="hidden sm:block" />
-              Stop optimizing for volume. Start optimizing for qualified leads.
+              Let's fix it.
             </p>
             <Link href="https://forms.acquirely.in/acquirely/form/LeadGenFunnelReviewCall/formperma/DEijNOw1e1C4Wd8r6luSZlNxj1zQVtObr106aUYe4-0">
             
@@ -972,8 +983,6 @@ export default function DoneForYouLandingPage() {
               <span>75-day risk reversal</span>
               <span>Full transparency</span>
             </div>
-
-
 
              <div className="md:mt-6 mt-6 border-t border-white/20 pt-8 flex flex-col gap-6"></div>
 
