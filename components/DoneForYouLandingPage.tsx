@@ -7,7 +7,7 @@ import { Check, CheckCircle2, DollarSign, Quote, XCircle } from "lucide-react";
 import flywheelImage from "@/app/assests/flywheelmodel.png";
 import kunalImage from "@/app/assests/kunalmondal.png";
 import mausamImage from "@/app/assests/mausamarora.png";
-import { Target, BarChart3, ClipboardEdit, IndianRupee } from "lucide-react";
+import { Target, BarChart3, ClipboardEdit, IndianRupee ,ArrowDown ,ArrowUp } from "lucide-react";
 import { ShieldCheck, TrendingUp, UserCheck, Zap } from "lucide-react";
 import { Pointer } from 'lucide-react';
 import logo from "@/app/assests/logo.png";
@@ -141,20 +141,18 @@ const caseStudies = [
 
 
 const fitItems = [
-  "Real estate agents & teams generating buyer/seller leads",
-  "Mortgage brokers needing consistent qualified applicants",
-  "Med spas & aesthetic clinics booking consultations",
-  "Professional services (legal, financial advisory, coaching)",
-  "Home services businesses (renovation, roofing, HVAC)",
-  "Any business spending $2K+/month on ads with no predictable system",
+  "You have a real sales process and someone following up on leads",
+  "You're ready to spend seriously on ads — not just test the waters (real estate teams, mortgage brokers, med spas, professional services, home services)",
+  "You've run ads before and know the problem isn't the platform",
+  "You want predictable pipeline, not a one-month spike"
 ];
 
 const notFitItems = [
-  "Single-location business (one clinic, one office)",
-  "Local service with catchment area < 50km",
-  "Spending < $10K and not willing to scale",
-  "No CRM or sales follow-up process",
-  "You just want \"cheap leads\"",
+  "You want leads fast with no system behind them",
+  "You don't have a CRM or follow-up process",
+  "You're looking for the cheapest option in the room",
+  "You want to try it for a month and see"
+
 ];
 
 const founders = [
@@ -164,7 +162,7 @@ const founders = [
     tag: "Growth & Strategy Head",
     image: mausamImage,
     body:
-      "Mausam spent 12 years inside education - building curricula, publishing 300+ books, and reaching 2,000+ schools. That journey taught him one thing: great products don't grow themselves. He built Acquirely to turn scattered ad spend into acquisition systems that compound.",
+      "For 11 years, Mausam scaled his own business the hard way — cold calls, trade shows, relationship by relationship. Then one insight changed everything: businesses that make the right people come to them grow differently. Predictably. At scale. That obsession with inbound systems is what Acquirely is built on. He's not an agency guy who learned ads — he's a founder who needed this system, built it, and now builds it for others.",
     bullets: [
       "Founder-level understanding of what happens before and after the click",
       "Managed $3mn+ in annual ad spend",
@@ -477,9 +475,79 @@ export default function DoneForYouLandingPage() {
         </h1>
       </div>
 
-      {/* 2. TEXT CTA (Replaced Video): Order 2 on Mobile, but Column 2 on Desktop */}
-      <div className="order-2 mt-8 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2">
-       <Image src={Dashboard} alt="Dashboard" className="h-full w-full object-cover" />
+      {/* 2. CUSTOM DATA COMPONENT: Order 2 on Mobile, Column 2 on Desktop */}
+      <div className="order-2 mt-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0">
+        <div className="mx-auto flex w-full max-w-[550px] flex-col gap-2 font-['Open_Sans'] sm:gap-3">
+          
+          {/* Before Section */}
+          <div className="rounded-2xl border border-[#4a1c1c] bg-[#14080a]/80 p-4 shadow-xl backdrop-blur-sm sm:p-5">
+            <div className="mb-4 flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-[#ff4d4d]"></div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#ff4d4d] sm:text-xs">Before Acquirely</span>
+            </div>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <div className="rounded-xl border border-white/5 bg-white/5 p-3">
+                <div className="text-[9px] font-semibold uppercase tracking-wider text-gray-400 sm:text-[10px]">Cost Per Lead</div>
+                <div className="my-1 text-2xl font-bold text-white">$50</div>
+                <div className="inline-flex items-center rounded border border-[#4a1c1c] bg-[#3a0a0a]/50 px-2 py-0.5 text-[9px] font-medium text-[#ff4d4d] sm:text-[10px]">High & rising</div>
+              </div>
+              <div className="rounded-xl border border-white/5 bg-white/5 p-3">
+                <div className="text-[9px] font-semibold uppercase tracking-wider text-gray-400 sm:text-[10px]">Qualified Rate</div>
+                <div className="my-1 text-2xl font-bold text-white">18%</div>
+                <div className="inline-flex items-center rounded border border-[#4a1c1c] bg-[#3a0a0a]/50 px-2 py-0.5 text-[9px] font-medium text-[#ff4d4d] sm:text-[10px]">Unpredictable</div>
+              </div>
+              <div className="rounded-xl border border-white/5 bg-white/5 p-3">
+                <div className="text-[9px] font-semibold uppercase tracking-wider text-gray-400 sm:text-[10px]">Cost / Qual. Lead</div>
+                <div className="my-1 text-2xl font-bold text-white">$278</div>
+                <div className="inline-flex items-center rounded border border-[#4a1c1c] bg-[#3a0a0a]/50 px-2 py-0.5 text-[9px] font-medium text-[#ff4d4d] sm:text-[10px]">Bleeding spend</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Middle Divider */}
+          <div className="my-1 flex flex-col items-center justify-center">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[#4a1c1c] bg-[#1a0a0a]">
+              <ArrowDown className="h-3.5 w-3.5 text-[#ff4d4d]" strokeWidth={3} />
+            </div>
+            <div className="my-2.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-[#64748b] sm:text-[10px]">
+              90 Days With The A3 System
+            </div>
+            <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[#0f4a2b] bg-[#0a1a10]">
+              <ArrowDown className="h-3.5 w-3.5 text-[#00E599]" strokeWidth={3} />
+            </div>
+          </div>
+
+          {/* After Section */}
+          <div className="rounded-2xl border border-[#0f4a2b] bg-[#07160e]/80 p-4 shadow-xl backdrop-blur-sm sm:p-5">
+            <div className="mb-4 flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-[#00E599]"></div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#00E599] sm:text-xs">After Acquirely</span>
+            </div>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <div className="rounded-xl border border-white/5 bg-white/5 p-3">
+                <div className="text-[9px] font-semibold uppercase tracking-wider text-gray-400 sm:text-[10px]">Cost Per Lead</div>
+                <div className="my-1 text-2xl font-bold text-white">$18</div>
+                <div className="inline-flex items-center gap-1 rounded border border-[#0f4a2b] bg-[#0a2a1a]/50 px-2 py-0.5 text-[9px] font-medium text-[#00E599] sm:text-[10px]">
+                  <ArrowDown className="h-3 w-3" /> 64% drop
+                </div>
+              </div>
+              <div className="rounded-xl border border-white/5 bg-white/5 p-3">
+                <div className="text-[9px] font-semibold uppercase tracking-wider text-gray-400 sm:text-[10px]">Qualified Rate</div>
+                <div className="my-1 text-2xl font-bold text-white">29%</div>
+                <div className="inline-flex items-center gap-1 rounded border border-[#0f4a2b] bg-[#0a2a1a]/50 px-2 py-0.5 text-[9px] font-medium text-[#00E599] sm:text-[10px]">
+                  <ArrowUp className="h-3 w-3" /> Stable
+                </div>
+              </div>
+              <div className="rounded-xl border border-white/5 bg-white/5 p-3">
+                <div className="text-[9px] font-semibold uppercase tracking-wider text-gray-400 sm:text-[10px]">Cost / Qual. Lead</div>
+                <div className="my-1 text-2xl font-bold text-white">$62</div>
+                <div className="inline-flex items-center gap-1 rounded border border-[#0f4a2b] bg-[#0a2a1a]/50 px-2 py-0.5 text-[9px] font-medium text-[#00E599] sm:text-[10px]">
+                  <ArrowDown className="h-3 w-3" /> 78% drop
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* 3. SUBTEXT & CTA: Order 3 on Mobile, but back to Column 1 on Desktop */}
@@ -494,7 +562,7 @@ export default function DoneForYouLandingPage() {
             type="button"
             className="mt-7 inline-flex rounded-xl bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 py-3.5 text-center text-sm font-bold text-white shadow-[0_20px_25px_-5px_rgba(43,127,255,0.25),0_8px_10px_-6px_rgba(43,127,255,0.25)] sm:mt-8 sm:px-8 sm:py-4 sm:text-base lg:text-lg"
           >
-             <span className="rotate-90 "><Pointer/></span><span className="pl-2">Get Leads Your Sales Team Will Love</span>
+             <span className="rotate-90"><Pointer/></span><span className="pl-2">Get Leads Your Sales Team Will Love</span>
           </button>
         </Link>
         
@@ -706,17 +774,11 @@ export default function DoneForYouLandingPage() {
           </p>
         </div>
 
-        {/* Notice Section */}
-        <div className="text-center">
-          <p className="mb-6 text-[14px] font-semibold text-[#7B8BA0] md:text-[16px]">
-            ■ All prices in Canadian Dollars (CAD). USD pricing available on request.
-          </p>
-        </div>
 
         {/* Top Price Cards */}
         <div className="mb-10 grid gap-4 sm:grid-cols-2 md:mb-12 md:gap-6">
           <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#F4F7FF] px-4 py-8 text-center md:px-6 md:py-10">
-            <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $2,000 - $30,000/mo ad spend</p>
+            <p className="mb-1 text-[14px] text-[#7B8BA0] md:mb-2 md:text-[18px]">For $8,000 - $30,000/mo ad spend</p>
             <p className="mb-1 text-[32px] font-bold leading-tight text-black md:mb-2 md:text-[45px] md:leading-[45px]">$3,000/month</p>
             <p className="text-[16px] text-[#7B8BA0] md:text-[24px]">+ applicable tax</p>
           </div>
@@ -803,73 +865,17 @@ export default function DoneForYouLandingPage() {
       </div>
     </section>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-8 sm:py-12 lg:px-[144px] lg:py-16">
-          <div className="rounded-[24px] bg-[#0F172B] px-5 py-7 sm:px-10 sm:py-8 lg:px-16 lg:py-12">
-            <div className="max-w-[768px]">
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-20 items-center justify-center rounded-xl bg-[#007BFF] text-white">
-                  <ShieldCheck className="h-6 w-6" strokeWidth={2.2} />
-                </div>
-                <h2 className="text-[24px] font-bold leading-[1.15] text-white sm:text-[32px] sm:leading-[1.2] lg:text-[36px] lg:leading-[40px]">
-                  If We Don&apos;t Improve Your Lead Economics... We Work Free.
-                </h2>
-              </div>
-
-              <p className="mt-6 font-['Open_Sans'] text-[15px] leading-6 text-[#CAD5E2] sm:mt-8 sm:text-base sm:leading-7 lg:text-lg">
-                We don&apos;t believe in unrealistic guarantees-only accountability.
-              </p>
-
-              <div className="mt-8">
-                <div className="text-xl font-bold text-[#007BFF]">OUR COMMITMENTS</div>
-                <p className="mt-4 font-['Open_Sans'] text-base text-[#CAD5E2]">
-                  After a 75-90 day stabilisation period, if there&apos;s no clear improvement in:
-                </p>
-                <div className="mt-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <CheckBullet color="#007BFF" />
-                    <span className="font-['Open_Sans'] text-base text-white">Cost per qualified lead</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckBullet color="#007BFF" />
-                    <span className="font-['Open_Sans'] text-base text-white">Lead volume at consistent CPQL</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-       
-                <div className="rounded-xl flex border border-[rgba(0,255,170,0.5)] bg-[rgba(16,185,129,0.05)] px-6 py-5 font-['Open_Sans'] text-sm leading-5 text-white">
-                            <CheckCircle2 className="h-10 w-10 flex text-[#10B981]" strokeWidth={2.2} />
-                  <div className="flex px-4">Work the next month at zero management fee to fix performance</div>
-                </div>
-                <div className="rounded-xl flex border border-[rgba(0,255,170,0.5)] bg-[rgba(16,185,129,0.05)] px-6 py-5 font-['Open_Sans'] text-sm leading-5 text-white">
-                  <CheckCircle2 className="h-10 w-10 flex text-[#10B981]" strokeWidth={2.2} />
-                 <div className="flex px-4">
-                   End the engagement with a clean, no-lock-in exit and full learning handover
-                 </div>
-                </div>
-              </div>
-
-              <p className="mt-8 text-lg font-bold text-[#007BFF]">
-                If we&apos;re not creating value, we don&apos;t earn the retainer.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-[#F9FAFB]">
         <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-8 sm:py-12 lg:px-[167px] lg:py-16">
           <div className="flex justify-center">
             <SmallLabel>NOT FOR EVERYONE</SmallLabel>
           </div>
           <h2 className="mx-auto mt-8 max-w-[1106px] text-center text-[28px] font-extrabold leading-[1.15] text-transparent sm:mt-10 sm:text-[34px] sm:leading-[1.2] lg:text-[40px] lg:leading-[49px] bg-[linear-gradient(90deg,#818CF8_0%,#F97316_42.79%)] bg-clip-text">
-            This Is for Multi-Location &amp; Online Lead Gen Brands.
+            We Work With Businesses Ready to Scale. 
             <br />
             <span className="text-black">
 
-            Not for Local Businesses.
+           Not Businesses Still Testing the Waters.
             </span>
           </h2>
 
